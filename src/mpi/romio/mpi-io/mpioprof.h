@@ -139,6 +139,8 @@
 #define MPI_File_get_atomicity PMPI_File_get_atomicity
 #undef MPI_File_sync
 #define MPI_File_sync PMPI_File_sync
+#undef MPI_File_flush
+#define MPI_File_flush PMPI_File_flush
 
 #undef MPI_Type_create_subarray
 #define MPI_Type_create_subarray PMPI_Type_create_subarray

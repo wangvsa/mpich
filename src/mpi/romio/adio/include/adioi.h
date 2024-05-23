@@ -228,6 +228,7 @@ struct ADIOI_Fns_struct {
                                      MPI_Datatype datatype, int file_ptr_type,
                                      ADIO_Offset offset, ADIO_Request * request, int *error_code);
     void (*ADIOI_xxx_Flush) (ADIO_File fd, int *error_code);
+    void (*ADIOI_xxx_ConsistencySync) (ADIO_File fd, int *error_code);
     void (*ADIOI_xxx_Resize) (ADIO_File fd, ADIO_Offset size, int *error_code);
     void (*ADIOI_xxx_Delete) (const char *filename, int *error_code);
     int (*ADIOI_xxx_Feature) (ADIO_File fd, int flag);
@@ -334,6 +335,8 @@ struct ADIOI_Fns_struct {
 
 #define ADIO_Flush(fd,error_code) (*(fd->fns->ADIOI_xxx_Flush))(fd,error_code)
 
+#define ADIO_ConsistencySync(fd,error_code) (*(fd->fns->ADIOI_xxx_ConsistencySync))(fd,error_code)
+
 #define ADIO_Resize(fd,size,error_code)                 \
     (*(fd->fns->ADIOI_xxx_Resize))(fd,size,error_code)
 
@@ -388,6 +391,7 @@ void ADIOI_Info_print_keyvals(MPI_Info info);
 
 void ADIOI_GEN_Fcntl(ADIO_File fd, int flag, ADIO_Fcntl_t * fcntl_struct, int *error_code);
 void ADIOI_GEN_Flush(ADIO_File fd, int *error_code);
+void ADIOI_GEN_ConsistencySync(ADIO_File fd, int *error_code);
 void ADIOI_GEN_OpenColl(ADIO_File fd, int rank, int access_mode, int *error_code);
 void ADIOI_SCALEABLE_OpenColl(ADIO_File fd, int rank, int access_mode, int *error_code);
 void ADIOI_FAILSAFE_OpenColl(ADIO_File fd, int rank, int access_mode, int *error_code);
