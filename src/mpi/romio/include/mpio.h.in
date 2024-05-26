@@ -248,6 +248,7 @@ int MPI_File_get_atomicity(MPI_File fh, int *flag) ROMIO_API_PUBLIC;
 int MPI_File_sync(MPI_File fh) ROMIO_API_PUBLIC;
 /* CHEN */
 int MPI_File_flush(MPI_File fh) ROMIO_API_PUBLIC;
+int MPI_File_fetch(MPI_File fh) ROMIO_API_PUBLIC;
 
 /* Section 4.13.3 */
 #ifndef MPICH
@@ -552,6 +553,7 @@ int PMPI_File_set_atomicity(MPI_File, int) ROMIO_API_PUBLIC;
 int PMPI_File_get_atomicity(MPI_File, int *) ROMIO_API_PUBLIC;
 int PMPI_File_sync(MPI_File) ROMIO_API_PUBLIC;
 int PMPI_File_flush(MPI_File) ROMIO_API_PUBLIC;
+int PMPI_File_fetch(MPI_File) ROMIO_API_PUBLIC;
 
 /* Section 4.13.3 */
 #ifndef MPICH

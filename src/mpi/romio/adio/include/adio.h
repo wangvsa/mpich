@@ -429,6 +429,7 @@ ADIO_Offset ADIO_SeekIndividual(ADIO_File fd, ADIO_Offset offset, int whence, in
 void ADIO_Delete(char *filename, int *error_code);
 void ADIO_Flush(ADIO_File fd, int *error_code);
 void ADIO_ConsistencySync(ADIO_File fd, int *error_code);
+void ADIO_ConsistencyFetch(ADIO_File fd, int *error_code);
 void ADIO_Resize(ADIO_File fd, ADIO_Offset size, int *error_code);
 void ADIO_SetInfo(ADIO_File fd, MPI_Info users_info, int *error_code);
 int ADIO_ResolveFileType(MPI_Comm comm, const char *filename, int *fstype,

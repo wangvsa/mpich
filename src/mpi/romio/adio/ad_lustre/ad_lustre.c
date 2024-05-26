@@ -33,6 +33,7 @@ struct ADIOI_Fns_struct ADIO_LUSTRE_operations = {
     ADIOI_GEN_IwriteStrided,    /* IwriteStrided */
     ADIOI_GEN_Flush,    /* Flush */
     ADIOI_GEN_ConsistencySync,    /* Consistency */
+    ADIOI_GEN_ConsistencyFetch,    /* Consistency */
     ADIOI_GEN_Resize,   /* Resize */
     ADIOI_GEN_Delete,   /* Delete */
     ADIOI_GEN_Feature,  /* Features */

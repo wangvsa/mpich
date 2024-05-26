@@ -141,6 +141,8 @@
 #define MPI_File_sync PMPI_File_sync
 #undef MPI_File_flush
 #define MPI_File_flush PMPI_File_flush
+#undef MPI_File_fetch
+#define MPI_File_fetch PMPI_File_fetch
 
 #undef MPI_Type_create_subarray
 #define MPI_Type_create_subarray PMPI_Type_create_subarray

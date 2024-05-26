@@ -16,6 +16,7 @@ romio_mpi_sources +=          \
     mpi-io/file_f2c.c         \
     mpi-io/fsync.c            \
     mpi-io/flush.c            \
+    mpi-io/fetch.c            \
     mpi-io/get_amode.c        \
     mpi-io/get_atom.c         \
     mpi-io/get_bytoff.c       \
