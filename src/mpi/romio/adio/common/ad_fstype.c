@@ -573,7 +573,6 @@ static int ADIO_FileSysType_prefix(const char *filename, int *fstype,
     /* for a known prefix, check if it file system is enabled */
     i = 0;
     while (fstypes[i].fileops) {
-        fprintf(stderr, "CHEN try fstypes[i].prefix: %s vs. %s\n", fstypes[i].prefix, prefix);
         if (!strncasecmp(fstypes[i].prefix, prefix, strlen(fstypes[i].prefix))) {
             *fstype = fstypes[i].fstype;
             *ops = fstypes[i].fileops;
