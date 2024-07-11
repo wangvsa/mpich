@@ -198,6 +198,9 @@ static struct ADIO_FSTypes fstypes[] = {
     /* userspace driver only selected via prefix */
     {&ADIO_QUOBYTEFS_operations, ADIO_QUOBYTEFS, "quobyte:", 0},
 #endif
+#ifdef ROMIO_UNIFY
+    {&ADIO_UNIFY_operations, ADIO_UNIFY, "unify:", 0},
+#endif
     {0, 0, 0, 0}        /* guard entry */
 };
 
@@ -217,6 +220,7 @@ static const char *fstype_prefix[] = {
     "testfs",
     "ime",
     "quobyte",
+    "unify",
     NULL        /* guard entry */
 };
 
